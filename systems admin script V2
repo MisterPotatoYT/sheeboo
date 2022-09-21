@@ -1,0 +1,110 @@
+print("Loaded.")
+
+print("System's Classic Admin V2")
+
+print("Enjoy!")
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+	Title = "Welcome";
+	Text = "to System's Classic Admin V2!";
+	Duration = 5;
+	--Callback here
+	Button1 = "Hello";
+    })
+
+CoreGui:SetCore("SendNotification", {
+	Title = "TP is enabled!";
+	Text = "Click Q on your keyboard to teleport to where your mouse is!";
+	Duration = 10;
+	--Callback here
+	Button1 = "Ok, got it.";
+    })
+
+    -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local rejoin = Instance.new("TextButton")
+local resetchar = Instance.new("TextButton")
+local displayadmin = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.19549419, 0, 0.679012358, 0)
+Frame.Size = UDim2.new(0, 826, 0, 218)
+Frame.Active = true
+Frame.Draggable = true
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0, 0, 0.541284442, 0)
+Frame_2.Size = UDim2.new(0, 100, 0, 100)
+
+rejoin.Name = "rejoin"
+rejoin.Parent = Frame_2
+rejoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rejoin.Position = UDim2.new(0.10726393, 0, -0.508532047, 0)
+rejoin.Size = UDim2.new(0, 200, 0, 50)
+rejoin.Font = Enum.Font.LuckiestGuy
+rejoin.Text = "rj (rejoin)"
+rejoin.TextColor3 = Color3.fromRGB(0, 0, 0)
+rejoin.TextScaled = true
+rejoin.TextSize = 14.000
+rejoin.TextWrapped = true
+rejoin.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+end)
+
+resetchar.Name = "resetchar"
+resetchar.Parent = Frame_2
+resetchar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+resetchar.Position = UDim2.new(5.54334116, 0, -0.508532047, 0)
+resetchar.Size = UDim2.new(0, 200, 0, 50)
+resetchar.Font = Enum.Font.LuckiestGuy
+resetchar.Text = "reset"
+resetchar.TextColor3 = Color3.fromRGB(0, 0, 0)
+resetchar.TextScaled = true
+resetchar.TextSize = 14.000
+resetchar.TextWrapped = true
+resetchar.MouseButton1Down:connect(function()
+    
+
+end)
+
+displayadmin.Name = "displayadmin"
+displayadmin.Parent = Frame_2
+displayadmin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+displayadmin.Position = UDim2.new(2.66893458, 0, -0.508532107, 0)
+displayadmin.Size = UDim2.new(0, 200, 0, 50)
+displayadmin.Font = Enum.Font.LuckiestGuy
+displayadmin.Text = "dan (display admin name"
+displayadmin.TextColor3 = Color3.fromRGB(0, 0, 0)
+displayadmin.TextScaled = true
+displayadmin.TextSize = 14.000
+displayadmin.TextWrapped = true
+displayadmin.MouseButton1Down:Connect(function()
+    game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer("[ > I'm using System's Classic Admin GUI <] (1.0)","All")
+end)
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(0, 0, -1.18000007, 0)
+TextLabel.Size = UDim2.new(0, 826, 0, 50)
+TextLabel.Font = Enum.Font.LuckiestGuy
+TextLabel.Text = "System's Classic Admin V2"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 37.000
+TextLabel.TextWrapped = true
